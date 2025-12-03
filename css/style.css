@@ -1,0 +1,76 @@
+/* 智慧電網調度員 - 霓虹藍科技風格 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft JhengHei', 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1e3e 100%);
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    color: #00d9ff;
+}
+
+#game-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    display: block;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: none;
+}
+
+/* 霓虹藍發光效果 */
+.neon-text {
+    color: #00d9ff;
+    text-shadow:
+        0 0 5px #00d9ff,
+        0 0 10px #00d9ff,
+        0 0 20px #00a3ff,
+        0 0 40px #0077ff;
+}
+
+.neon-border {
+    border: 2px solid #00d9ff;
+    box-shadow:
+        0 0 10px #00d9ff,
+        inset 0 0 10px rgba(0, 217, 255, 0.2);
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (orientation: portrait) {
+    #game-container {
+        flex-direction: column;
+    }
+}
+
+/* 防止觸控縮放 */
+html {
+    touch-action: manipulation;
+}
+
+/* 載入動畫 */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.loading {
+    animation: pulse 1.5s ease-in-out infinite;
+}

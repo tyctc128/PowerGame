@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="智慧電網調度員 - 互動式電力平衡模擬遊戲">
+    <title>智慧電網調度員</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container"></div>
+
+    <!-- Phaser 3 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.70.0/dist/phaser.min.js"></script>
+
+    <!-- 數據層 -->
+    <script src="js/data/energyData.js"></script>
+    <script src="js/data/levelData.js"></script>
+
+    <!-- 系統層 -->
+    <script src="js/systems/EnergySystem.js"></script>
+    <script src="js/systems/WeatherSystem.js"></script>
+    <script src="js/systems/DemandSystem.js"></script>
+    <script src="js/systems/BalanceSystem.js"></script>
+    <script src="js/systems/EventSystem.js"></script>
+    <script src="js/systems/CostSystem.js"></script>
+
+    <!-- UI 組件層 -->
+    <script src="js/ui/EnergyDial.js"></script>
+    <script src="js/ui/Dashboard.js"></script>
+    <script src="js/ui/EventMarquee.js"></script>
+
+    <!-- 輸入處理層 -->
+    <script src="js/input/InputHandler.js"></script>
+
+    <!-- 場景層 -->
+    <script src="js/scenes/BootScene.js"></script>
+    <script src="js/scenes/MenuScene.js"></script>
+    <script src="js/scenes/LevelSelectScene.js"></script>
+    <script src="js/scenes/BriefingScene.js"></script>
+    <script src="js/scenes/GameScene.js"></script>
+    <script src="js/scenes/ResultScene.js"></script>
+
+    <!-- 配置與主入口 -->
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
